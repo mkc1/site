@@ -1,5 +1,5 @@
 const http = require('http');
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 http.createServer(function(req, res) {  
   res.writeHead(200, {
@@ -10,4 +10,4 @@ http.createServer(function(req, res) {
     '<style type="text/css">* {font-family:arial, sans-serif;}</style>\n' + 
     '\n\n<h3>software engineer in NYC</h3>\n')
   res.end();
-}).listen(3000);
+}).listen(port);
